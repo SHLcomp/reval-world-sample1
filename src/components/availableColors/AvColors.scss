@@ -1,0 +1,73 @@
+.avColors {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1cm;
+
+    h1 {
+        font-size: var(--font-size);
+        font-family: var(--main-font);
+        color: var(--main-color-2);
+    }
+
+    .colors-con {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-block: 20px;
+        margin-top: 30px;
+        gap: 10px;
+        .color {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.2em;
+            background: var(--second-color);
+            padding: 5px;
+            .circle {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                background-image: var(--img);
+                background-size: cover;
+                background-position: center;
+                transition: 0.3s ease;
+                position: relative;
+                overflow: hidden;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-color: var(--color);
+                    right: 150px;
+                    transition: .5s;
+                    transform: rotate(45deg);
+                    box-shadow: 2px 2px 5px;
+                }
+
+                &:hover::before {
+                    right: 0;
+                }
+            }
+        }
+    }
+     .ctaH5{
+            margin-top: 2cm;
+            text-orientation: upright;
+        }
+}
+
+@keyframes colorSwitch {
+    0% {}
+
+    100% {
+        // I want the before element to change like this:
+        right: -100px;
+    }
+}

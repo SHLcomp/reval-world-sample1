@@ -1,0 +1,114 @@
+/* google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inconsolata:wght@200..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Libertinus+Math&family=Michroma&family=Noto+Sans+Arabic:wght@100..900&family=Smooch+Sans:wght@100..900&display=swap");
+/* root */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+}
+
+:root {
+  --main-color: #ee0f0f;
+  --main-color-2: #4e4d4d;
+  --main-color-3: #131313;
+  --main-gr: linear-gradient(90deg, var(--main-color), var(--main-color-2));
+  --second-color: #f9fafb;
+  --bubble-bg: linear-gradient(45deg, #afafaf, 50%, #e99898);
+  --nav-font-family: "Josefin Sans";
+  --nav-bg: #f9fafb;
+  --landpage-title-font: "Michroma";
+  --main-font: "Michroma";
+  --font-size: 32px;
+  --ar-font: "Amiri";
+  --text-hover-tran: 0.2s ease;
+  --hero-bg-img: url(./assets/bg3.png);
+  --box-bg: white;
+  --div-bg: linear-gradient(45deg, #4e4d4d, 50%, #131313);
+  --dark-body-bg: linear-gradient(45deg, #3c3c3c, #4e4d4d);
+  --cta-color: rgb(163, 162, 162);
+}
+
+/* shared styles */
+.a {
+  color: black;
+  text-decoration: none;
+}
+.ar {
+  font-family: var(--ar-font) !important;
+  word-spacing: 20px !important;
+  text-align: right !important;
+}
+.ctaH5 {
+  font-size: 1.3em;
+  background: var(--cta-color);
+  padding-block: 10px;
+  padding-inline: 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 2px 2px 8px;
+}
+
+/* animations */
+
+@keyframes boxFade {
+  from {
+    opacity: 50%;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+
+
+@keyframes slide {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes slideTxt {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+
+
+
+/* hero */
+@keyframes heroLogo {
+  0% {
+    margin-left: 300px;
+  }
+
+  100% {
+    margin-left: 0px;
+  }
+}
+
+@keyframes heroText {
+  0% {
+    opacity: 20%;
+    transform: scale(0.9);
+    letter-spacing: 0;
+  }
+  100% {
+    opacity: 100%;
+    transform: scale(1);
+    letter-spacing: 2px;
+  }
+}

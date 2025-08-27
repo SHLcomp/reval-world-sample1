@@ -1,0 +1,114 @@
+.gal {
+    margin-top: 3cm;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--second-color);
+
+    h1 {
+        position: relative;
+        padding-bottom: 1cm;
+        font-size: var(--font-size);
+        font-family: var(--main-font);
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 4px;
+            background: var(--main-gr);
+            top: 1.4cm;
+        }
+
+    }
+
+    h1.anim::before {
+        animation-name: slide;
+        animation-duration: 1s;
+    }
+
+    .gal-con {
+        display: flex;
+        position: relative;
+        width: 100%;
+        height: 55vh;
+        overflow: hidden;
+        align-items: center;
+        gap: 14cm !important;
+        mask-image: linear-gradient(to right,
+                rgba(0, 0, 0, 0),
+                rgba(0, 0, 0, 1) 10%,
+                rgba(0, 0, 0, 1) 90%,
+                rgba(0, 0, 0, 0));
+
+        img {
+            cursor: pointer;
+            transition: .2s;
+            opacity: 100%;
+            position: absolute;
+            width: 200px;
+
+            // mix-blend-mode: color-burn;
+            // filter: drop-shadow(2px 2px 5px);
+            &:hover {
+                transform: scale(1.05);
+                opacity: 70%;
+            }
+        }
+
+        .gal-item {
+            position: absolute;
+            left: 100%;
+            animation: imgSlider 15s linear infinite; // shorter syntax
+            display: flex;
+            flex-direction: column;
+            padding-inline: 20px;
+        }
+
+        .no1 {
+            animation-delay: calc(15s / 8 * (8 - 1) * -1);
+        }
+
+        .no2 {
+            animation-delay: calc(15s / 8 * (8 - 2) * -1);
+        }
+
+        .no3 {
+            animation-delay: calc(15s / 8 * (8 - 3) * -1);
+        }        
+
+        .no4 {
+            animation-delay: calc(15s / 8 * (8 - 4) * -1);
+        }
+
+        .no5 {
+            animation-delay: calc(15s / 8 * (8 - 5) * -1);
+        }
+
+        .no6 {
+            animation-delay: calc(15s / 8 * (8 - 6) * -1);
+        }
+
+        .no7 {
+            animation-delay: calc(15s / 8 * (8 - 7) * -1);
+        }
+
+        .no8 {
+            animation-delay: calc(15s / 8 * (8 - 8) * -1);
+        }
+
+    }
+
+}
+
+@keyframes imgSlider {
+    0% {
+        left: 100%; // start off screen right
+    }
+
+    100% {
+        left: -300px; // slide fully left
+    }
+}

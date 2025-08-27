@@ -1,0 +1,44 @@
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-block: 10px;
+  font-family: var(--nav-font-family);
+  position: relative;
+  z-index: 900;
+  background: var(--nav-bg);
+
+  img {
+    height: 50px;
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    align-items: center;
+    font-size: 1.1em;
+
+    li {
+      cursor: pointer;
+      transition: var(--text-hover-tran);
+      padding-inline: 20px;
+      padding-block: 10px;
+      border-radius: 20px;
+
+      &:hover {
+        background: var(--main-color);
+        color: white !important;
+        box-shadow: 2px 2px 8px;
+      }
+    }
+  }
+}
+
+
+.clicked {
+  //useState this
+  background: var(--main-color);
+  color: white !important;
+  box-shadow: 2px 2px 8px;
+}

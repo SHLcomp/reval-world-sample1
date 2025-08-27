@@ -1,0 +1,169 @@
+.exp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2cm;
+
+    h1 {
+        font-size: var(--font-size);
+        font-family: var(--main-font);
+    }
+
+    .bullet-point {
+        ul {
+            li {
+                list-style: armenian;
+            }
+        }
+    }
+
+    .bubbles-con {
+        display: flex;
+        flex-direction: column; // instead of column
+        justify-content: space-between; // push them apart
+        width: 100% !important;
+        position: relative;
+        margin-top: 3cm;
+
+        .bubble {
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            .info {
+                position: relative;
+                width: 90%;
+                padding: 30px;
+                height: 90%;
+                top: 1cm;
+                left: 1cm;
+
+                h2 {
+                    font-family: var(--main-font);
+                    filter: drop-shadow(2px 3px 6px var(--main-color));
+                    padding: 20px;
+                }
+
+                ul {
+                    padding-top: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    li {
+                        list-style: none;
+                        position: relative;
+                        font-size: 1.5em;
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            width: 6px;
+                            height: 6px;
+                            border-radius: 50%;
+                            background: var(--main-gr) !important;
+                            left: -12px;
+                            top: 5px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .bub1 {
+            position: relative;
+            width: 760px;
+            min-height: 340px;
+            box-shadow: 2px 3px 7px;
+            border-radius: 72% 28% 43% 57% / 59% 68% 32% 41%;
+            left: -1cm;
+            top: -2cm;
+            z-index: 100;
+            // transform: rotateZ(180deg);
+            background: var(--bubble-bg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-self: flex-start;
+            .info{
+                top: -.5cm;
+            }
+        }
+
+
+
+        .bub2 {
+            position: relative;
+            width: 760px;
+            min-height: 340px;
+            box-shadow: 2px 3px 7px;
+            border-radius: 30% 70% 91% 9% / 13% 76% 24% 87%;
+            align-self: flex-end; //issue here, this doesn't work
+            z-index: 100;
+            // transform: rotateZ(180deg);
+            background: var(--bubble-bg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .info {
+                display: flex;
+                gap: 20px;
+                h2 {
+                    //verticle text here
+                    writing-mode: vertical-rl; // text flows top → bottom
+                    // text-orientation: upright;
+                }
+            }
+        }
+
+
+        .bub3 {
+            position: relative;
+            width: 760px;
+            min-height: 540px;
+            box-shadow: 2px 3px 7px;
+            border-radius: 30% 70% 91% 9% / 13% 76% 24% 87%;
+            align-self: flex-end; //issue here, this doesn't work
+            right: -1cm;
+            top: -3cm;
+            z-index: 100;
+            // transform: rotateZ(180deg);
+            background: var(--bubble-bg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .info {
+                display: flex;
+                gap: 20px;
+                top: 0cm;
+                left: 0;
+                h2 {
+                    //verticle text here
+                    writing-mode: vertical-rl; // text flows top → bottom
+                    // text-orientation: upright;
+                }
+            }
+        }
+
+        .bub4 {
+            position: relative;
+            width: 760px;
+            min-height: 440px;
+            box-shadow: 2px 3px 7px;
+            border-radius: 72% 28% 43% 57% / 59% 68% 32% 41%;
+            left: -1cm;
+            top: -7cm;
+            z-index: 100;
+            // transform: rotateZ(180deg);
+            background: var(--bubble-bg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-self: flex-start;
+        }
+
+    }
+}

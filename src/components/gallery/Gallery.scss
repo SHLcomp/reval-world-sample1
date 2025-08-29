@@ -119,7 +119,9 @@
 @media (max-width: 600px) {
     .gal {
         padding: 20px !important;
+        padding-bottom: 50px !important;
         h1 {
+            display: none;
             &::before {
                 content: '';
                 top: 2.3cm;
@@ -129,9 +131,19 @@
 
         .gal-con {
             display: flex !important;
+            overflow-x: auto;
+            flex-wrap: nowrap;
+            gap: 5px !important;
+
             .gal-item {
+                position: relative !important;
+                flex: 0 0 auto; // prevent shrinking
+                width: 80% !important; // scale items for mobile
+            }
+
+            img {
+                position: relative !important;
                 width: 100% !important;
-                padding-inline: 4cm !important;
             }
         }
     }

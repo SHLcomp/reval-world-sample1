@@ -20,6 +20,7 @@
             height: 4px;
             background: var(--main-gr);
             top: 1.4cm;
+            transform-origin: left;
         }
 
     }
@@ -111,4 +112,19 @@
     100% {
         left: -300px; // slide fully left
     }
+}
+
+
+
+@media  (max-width: 600px) {
+  .gal{
+    .gal-con{
+        gap: 2px !important;
+        margin-top: -2cm;
+        .gal-item{
+            width: 20%;
+            padding-inline: 0 !important;
+        }
+    }
+  }
 }

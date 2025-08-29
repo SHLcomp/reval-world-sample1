@@ -1,5 +1,8 @@
 /* google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inconsolata:wght@200..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Libertinus+Math&family=Michroma&family=Noto+Sans+Arabic:wght@100..900&family=Smooch+Sans:wght@100..900&display=swap");
+/* bootstrap */
+
+
 /* root */
 * {
   margin: 0;
@@ -22,7 +25,7 @@ body {
   --nav-bg: #f9fafb;
   --landpage-title-font: "Michroma";
   --main-font: "Michroma";
-  --font-size: 32px;
+  --font-size: 32px; /* which is 1.5 em to a h1 */
   --ar-font: "Amiri";
   --text-hover-tran: 0.2s ease;
   --hero-bg-img: url(./assets/bg3.png);

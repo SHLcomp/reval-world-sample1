@@ -33,8 +33,11 @@ nav {
       }
     }
   }
+  
 }
-
+#burg{
+  display: none;
+}
 
 .clicked {
   //useState this
@@ -42,3 +45,34 @@ nav {
   color: white !important;
   box-shadow: 2px 2px 8px;
 }
+
+
+/* Desktop default */
+#ulBurg {
+  display: flex;
+  gap: 1rem;
+}
+
+@media  (max-width: 600px) {
+  #ulBurg {
+    display: none;
+    flex-direction: column !important;
+    background: white;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 0 1rem;
+    padding-top: 30px;
+  }
+
+  #ulBurg.open {
+    display: flex;
+  }
+
+  #burg {
+    display: block;
+    cursor: pointer;
+  }
+}
+  

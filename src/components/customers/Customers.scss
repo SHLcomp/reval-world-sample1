@@ -117,32 +117,55 @@
 
 
 @media (max-width: 640px) {
-  .cust{
-    padding-top: max(0cm, 7cm); //fix so it only gives 7cm only on smaller phones
-    
-    h1{
-        padding-inline: 20px;
-    }
-    .en::before {
-        content: '';
-        position: absolute;
-        width: 250px;
-        height: 3px;
-        background: linear-gradient(90deg, var(--main-color), var(--main-color-2));
-        margin-top: 2.3cm;
-        transform-origin: left;
+    .cust {
+        padding-top: max(0cm, 7cm); //fix so it only gives 7cm only on smaller phones
 
-    }
+        h1 {
+            padding-inline: 20px;
+        }
 
-    .ar::after {
-        content: '';
-        position: absolute;
-        width: 120px;
-        height: 3px;
-        background: linear-gradient(90deg, var(--main-color), var(--main-color-2));
-        margin-top: 1cm;
-        transform-origin: right;
-        margin-left: -120px;
+        .en::before {
+            content: '';
+            position: absolute;
+            width: 250px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--main-color), var(--main-color-2));
+            margin-top: 2.3cm;
+            transform-origin: left;
+
+        }
+
+        .ar::after {
+            content: '';
+            position: absolute;
+            width: 120px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--main-color), var(--main-color-2));
+            margin-top: 1cm;
+            transform-origin: right;
+            margin-left: -120px;
+        }
+
+        .cont {
+            .item {
+                width: 150px;
+                height: 100px;
+
+                .info {
+                    text-align: center;
+                    align-items: center;
+                    justify-content: center;
+
+                    h5 {
+                        font-size: 13px !important;
+                    }
+
+                }
+
+                .arDes {
+                    margin-top: 20px !important;
+                }
+            }
+        }
     }
-  }
 }

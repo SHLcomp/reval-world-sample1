@@ -12,6 +12,7 @@
   -webkit-mask-image: linear-gradient(0deg, #000, 90%, rgba(0, 0, 0, 0));
   /* fading effect */
   mask-image: linear-gradient(0deg, #000, 90%, rgba(0, 0, 0, 0));
+
   /* fading effect */
   &::before {
     content: '';
@@ -39,12 +40,12 @@
     //   animation-name: heroLogo;
     //   animation-duration: 3s;
     // }
-    h1.anim{
-  
+    h1.anim {
+
       animation-name: heroText;
       animation-duration: 3s;
       animation-fill-mode: both;
-}
+    }
 
     h1 {
       position: relative;
@@ -60,12 +61,14 @@
     p {
       margin-top: 10px;
     }
-    p.anim{
-      
+
+    p.anim {
+
       animation-name: heroText;
       animation-duration: 3s;
       animation-fill-mode: both;
     }
+
     .ar {
       font-size: 4em;
     }
@@ -75,17 +78,24 @@
 
 
 @media (max-width: 640px) {
-  .hero{
+  .hero {
+    height: 80vh;
+
     &::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(133, 132, 132, 0.578);
-  }
-    .text{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(133, 132, 132, 0.578);
+    }
+
+    .text {
       font-size: xx-small !important;
       margin-top: -2cm;
+
+      h1 {
+        font-weight: 900 !important;
+      }
     }
   }
 }

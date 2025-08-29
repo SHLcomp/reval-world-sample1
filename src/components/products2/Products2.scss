@@ -187,3 +187,17 @@
     }
   }
 }
+
+
+
+@media (max-width: 640px) {
+  .products2{
+    .container{
+      .prod{
+        width: 150px;
+        height: 100px;
+        font-size: small;
+      }
+    }
+  }
+}

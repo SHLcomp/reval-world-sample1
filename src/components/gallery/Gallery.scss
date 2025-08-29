@@ -129,20 +129,20 @@
         }
 
         .gal-con {
-            display: flex !important;
+            display: flex;
             overflow-x: auto;
             flex-wrap: nowrap;
             gap: 5px !important;
             margin-top: 40px;
 
             .gal-item {
-                position: relative !important;
+                position: relative;
                 flex: 0 0 auto; // prevent shrinking
                 width: 80% !important; // scale items for mobile
             }
 
             img {
-                position: relative !important;
+                position: relative;
                 width: 100% !important;
             }
         }

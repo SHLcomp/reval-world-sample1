@@ -143,6 +143,7 @@
   h5 {
     margin-top: 50px;
   }
+
   h5.anim {
     animation-name: boxFade;
     animation-duration: 2.3s;
@@ -162,4 +163,27 @@
     animation-fill-mode: forwards;
   }
 
+}
+
+
+
+
+
+@media (max-width: 640px) {
+
+  .txt {
+    .ar {
+      &::before {
+        content: '';
+        margin-top: 1cm !important;
+      }
+    }
+
+    .en {
+      &::before {
+        content: '';
+        margin-top: 1.2cm !important;
+      }
+    }
+  }
 }

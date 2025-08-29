@@ -37,7 +37,7 @@
         height: 55vh;
         overflow: hidden;
         align-items: center;
-        gap: 14cm !important;
+        gap: 14cm;
         mask-image: linear-gradient(to right,
                 rgba(0, 0, 0, 0),
                 rgba(0, 0, 0, 1) 10%,
@@ -104,17 +104,6 @@
 
 }
 
-@keyframes imgSlider {
-    0% {
-        left: 100%; // start off screen right
-    }
-
-    100% {
-        left: -300px; // slide fully left
-    }
-}
-
-
 
 @media (max-width: 600px) {
     .gal {
@@ -130,21 +119,33 @@
 
         .gal-con {
             display: flex;
-            overflow-x: auto;
-            flex-wrap: nowrap;
             gap: 5px !important;
-            margin-top: 40px;
-
+            padding-inline: 0 !important;
             .gal-item {
+                margin-top: 40px;
                 position: relative;
                 flex: 0 0 auto; // prevent shrinking
                 width: 80% !important; // scale items for mobile
             }
 
             img {
-                position: relative;
-                width: 100% !important;
+                position: absolute;
+                width: 50% !important;
             }
         }
     }
 }
+
+
+@keyframes imgSlider {
+    0% {
+        left: 100%; // start off screen right
+    }
+
+    100% {
+        left: -300px; // slide fully left
+    }
+}
+
+
+

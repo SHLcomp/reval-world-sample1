@@ -1,78 +1,78 @@
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding-block: 10px;
-  font-family: var(--nav-font-family);
-  position: relative;
-  z-index: 900;
-  background: var(--nav-bg);
-
-  img {
-    height: 50px;
-  }
-
-  ul {
+  nav {
     display: flex;
-    list-style: none;
-    gap: 10px;
+    justify-content: space-around;
     align-items: center;
-    font-size: 1.1em;
+    padding-block: 10px;
+    font-family: var(--nav-font-family);
+    position: relative;
+    z-index: 900;
+    background: var(--nav-bg);
 
-    li {
-      cursor: pointer;
-      transition: var(--text-hover-tran);
-      padding-inline: 20px;
-      padding-block: 10px;
-      border-radius: 20px;
+    img {
+      height: 50px;
+    }
 
-      &:hover {
-        background: var(--main-color);
-        color: white !important;
-        box-shadow: 2px 2px 8px;
+    ul {
+      display: flex;
+      list-style: none;
+      gap: 10px;
+      align-items: center;
+      font-size: 1.1em;
+
+      li {
+        cursor: pointer;
+        transition: var(--text-hover-tran);
+        padding-inline: 20px;
+        padding-block: 10px;
+        border-radius: 20px;
+
+        &:hover {
+          background: var(--main-color);
+          color: white !important;
+          box-shadow: 2px 2px 8px;
+        }
       }
     }
-  }
-  
-}
-#burg{
-  display: none;
-}
 
-.clicked {
-  //useState this
-  background: var(--main-color);
-  color: white !important;
-  box-shadow: 2px 2px 8px;
-}
-
-
-/* Desktop default */
-#ulBurg {
-  display: flex;
-  gap: 1rem;
-}
-
-@media only screen and (max-width: 600px) {
-  #ulBurg {
-    display: none;
-    flex-direction: column !important;
-    background: white;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    padding: 0 1rem;
-    padding-top: 30px;
-  }
-
-  #ulBurg.open {
-    display: flex;
   }
 
   #burg {
-    display: block;
-    cursor: pointer;
+    display: none;
   }
-}
-  
+
+  .clicked {
+    //useState this
+    background: var(--main-color);
+    color: white !important;
+    box-shadow: 2px 2px 8px;
+  }
+
+
+  /* Desktop default */
+  #ulBurg {
+    display: flex;
+    gap: 1rem;
+  }
+
+  @media only screen and (max-width: 600px) {
+    nav{
+      width: 100%;
+      overflow: hidden;
+      display:flex !important;
+      flex-direction: column;
+      img{
+        height: 60px;
+      }
+      ul{
+        gap: 0px !important;
+        justify-content: space-between;
+        font-size: 1em !important;
+        width: 100%;
+        padding-inline: 10px;
+        li{
+          padding-inline: 10px !important;
+        }
+      }
+    }
+  }
+

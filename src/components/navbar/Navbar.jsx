@@ -2,12 +2,10 @@ import "./Navbar.scss";
 import logo from "../../assets/logo1.png";
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { useMyContext } from "../../context/MyContext"; // 👈 use this now
 
 const Navbar = () => {
   const location = useLocation();
   const [active, setActive] = useState("Home");
-  const { isMenuOpen, toggleMenu, closeMenu } = useMyContext();
 
   useEffect(() => {
     switch (location.pathname) {
@@ -29,19 +27,19 @@ const Navbar = () => {
   }, [location]);
 
   return (
-    <nav className="nav">
+    <>
+    
+      <nav>
       {/* Burger Button */}
       <img className="btn" src={logo} alt="" />
-      <i className={`fa-solid fa-2xl ${isMenuOpen ? "fa-x" : "fa-bars"}`} id="burg" onClick={toggleMenu}></i>
 
       {/* Menu with animation */}
-      <ul id="ulBurg" className={`menu ${isMenuOpen ? "open" : ""}`}>
+      <ul>
         <Link
           className="a"
           to="/reval-world-sample1/"
           onClick={() => {
             setActive("Home");
-            closeMenu();
           }}
         >
           <li className={active === "Home" ? "clicked" : ""}>Home</li>
@@ -52,7 +50,6 @@ const Navbar = () => {
           className="a"
           onClick={() => {
             setActive("Services");
-            closeMenu();
           }}
         >
           <li className={active === "Services" ? "clicked" : ""}>Services</li>
@@ -63,7 +60,6 @@ const Navbar = () => {
           to="/reval-world-sample1/proj"
           onClick={() => {
             setActive("Projects");
-            closeMenu();
           }}
         >
           <li className={active === "Projects" ? "clicked" : ""}>Projects</li>
@@ -74,7 +70,6 @@ const Navbar = () => {
           to="/reval-world-sample1/about"
           onClick={() => {
             setActive("About");
-            closeMenu();
           }}
         >
           <li className={active === "About" ? "clicked" : ""}>About Us</li>
@@ -85,13 +80,13 @@ const Navbar = () => {
           to="/reval-world-sample1/contact"
           onClick={() => {
             setActive("Contact");
-            closeMenu();
           }}
         >
           <li className={active === "Contact" ? "clicked" : ""}>Contact</li>
         </Link>
       </ul>
     </nav>
+    </>
   );
 };
 
